@@ -1,0 +1,205 @@
+{
+	"HostReport": {
+		"type": "object",
+		"properties": {
+			"broadcast": {
+				"title": "broadcasted",
+				"type": "boolean"
+			},
+			"host_tx_hash": {
+				"title": "host blockchain transaction hash",
+				"type": "string"
+			},
+			"host_tx_amount": {
+				"title": "host blockchain transaction amount",
+				"type": ["integer", "string"]
+			},
+			"host_tx_recipient": {
+				"title": "host blockchain transaction recipient",
+				"type": "string"
+			},
+			"witnessed_timestamp": {
+				"title": "witnessed timestamp",
+				"type": "integer"
+			},
+			"host_token_address": {
+				"title": "host blockchain token address",
+				"type": "string"
+			},
+			"originating_tx_hash": {
+				"title": "originating transaction hash",
+				"type": "string"
+			},
+			"originating_address": {
+				"title": "originating address",
+				"type": "string"
+			},
+			"native_token_address": {
+				"title": "native token address",
+				"type": "string"
+			},
+			"any_sender_nonce": {
+				"type": ["integer", "null"]
+			},
+			"host_account_nonce": {
+				"title": "host blockchain account nonce",
+				"type": "integer"
+			},
+			"native_latest_block_number": {
+				"title": "native blockchain latest block number",
+				"type": "integer"
+			},
+			"broadcast_tx_hash": {
+				"title": "broadcast transaction hash",
+				"type": "string"
+			},
+			"broadcast_timestamp": {
+				"title": "broadcast timestamp",
+				"type": "integer"
+			},
+			"any_sender_tx": {
+				"type": ["string", "null"]
+			}
+		},
+		"required": [
+			"any_sender_nonce",
+			"broadcast",
+			"broadcast_timestamp",
+			"broadcast_tx_hash",
+			"host_account_nonce",
+			"host_tx_amount",
+			"host_tx_hash",
+			"host_tx_recipient",
+			"originating_address",
+			"originating_tx_hash",
+			"witnessed_timestamp"
+		]
+	},
+	"NativeReport": {
+		"properties": {
+			"broadcast": {
+				"title": "broadcasted",
+				"type": "boolean"
+			},
+			"native_tx_hash": {
+				"title": "native blockchain transaction hash",
+				"type": "string"
+			},
+			"native_tx_amount": {
+				"title": "native blockchain transaction amount",
+				"type": ["integer", "string"]
+			},
+			"native_tx_recipient": {
+				"title": "native blockchain transaction recipient",
+				"type": "string"
+			},
+			"witnessed_timestamp": {
+				"title": "witnessed timestamp",
+				"type": "integer"
+			},
+			"host_token_address": {
+				"title": "host blockchain token address",
+				"type": "string"
+			},
+			"originating_tx_hash": {
+				"title": "originating transaction hash",
+				"type": "string"
+			},
+			"originating_address": {
+				"title": "originating address",
+				"type": "string"
+			},
+			"native_token_address": {
+				"title": "native token address",
+				"type": "string"
+			},
+			"any_sender_nonce": {
+				"type": ["integer", "null"]
+			},
+			"native_account_nonce": {
+				"title": "native blockchain account nonce",
+				"type": "integer"
+			},
+			"host_latest_block_number": {
+				"title": "host blockchain latest block number",
+				"type": "integer"
+			},
+			"broadcast_tx_hash": {
+				"title": "broadcast transaction hash",
+				"type": "string"
+			},
+			"broadcast_timestamp": {
+				"title": "broadcast timestamp",
+				"type": "integer"
+			},
+			"any_sender_tx": {
+				"type": ["string", "null"]
+			}
+		},
+		"required": [
+			"broadcast",
+			"broadcast_timestamp",
+			"broadcast_tx_hash",
+			"native_account_nonce",
+			"native_tx_amount",
+			"native_tx_recipient",
+			"originating_address",
+			"originating_tx_hash",
+			"witnessed_timestamp"
+		]
+	},
+	"HostReportArray": {
+		"type": "array",
+		"items": {
+			"$ref": "#/components/schemas/HostReport"
+		}
+	},
+	"NativeReportArray": {
+		"type": "array",
+		"items": {
+			"$ref": "#/components/schemas/NativeReport"
+		}
+	},
+	"Report": {
+		"oneOf": [{
+			"$ref": "#/components/schemas/HostReport"
+		}, {
+			"$ref": "#/components/schemas/NativeReport"
+		}]
+	},
+	"ReportArray": {
+		"oneOf": [{
+			"$ref": "#/components/schemas/HostReportArray"
+		}, {
+			"$ref": "#/components/schemas/NativeReportArray"
+		}]
+	},
+	"HostReports": {
+		"type": "object",
+		"properties": {
+			"totalPages": {
+				"title": "total pages",
+				"type": "integer"
+			},
+			"reports": {
+				"title": "reports",
+				"$ref": "#/components/schemas/HostReportArray"
+			}
+
+		}
+	},
+	"NativeReports": {
+		"type": "object",
+		"properties": {
+			"totalPages": {
+				"title": "total pages",
+				"type": "integer"
+			},
+			"reports": {
+				"title": "reports",
+				"$ref": "#/components/schemas/NativeReportArray"
+			}
+
+		}
+	}
+}

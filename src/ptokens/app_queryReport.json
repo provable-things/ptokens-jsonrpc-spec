@@ -1,0 +1,152 @@
+[{
+	"name": "app_queryReport",
+	"summary": "Returns query report by nonce.",
+	"params": [{
+			"name": "Report Type",
+			"required": true,
+			"schema": {
+				"title": "report type",
+				"type": "string"
+			}
+		},
+		{
+			"name": "Nonce",
+			"required": true,
+			"schema": {
+				"title": "nonce",
+				"type": "integer"
+			}
+		}
+	],
+	"result": {
+		"name": "Query report",
+		"schema": {
+			"$ref": "#/components/schemas/Report"
+		}
+	},
+	"examples": [{
+			"name": "TLOS on BSC host",
+			"description": "app_queryReport result for host report in the TLOS on BSC bridge",
+			"params": [{
+					"name": "Report Type",
+					"value": "host"
+				},
+				{
+					"name": "Nonce",
+					"value": 2
+				}
+			],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"host_tx_hash": "0x1d2ca719554432792e8fa1e66a22b5369f285796b3c7c6b2dd147187bd218db6",
+					"host_tx_amount": "10000000000000000",
+					"host_tx_recipient": "0x6538392c2607e704535cf745e8885302baa71f07",
+					"witnessed_timestamp": 1619001690,
+					"host_token_address": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+					"originating_tx_hash": "3196053b6e8693d5bf8e7762014cc3379384eb2be03f7d391749d11887e47729",
+					"originating_address": "whateverxxxy",
+					"native_token_address": "eosio.token",
+					"any_sender_nonce": null,
+					"host_account_nonce": 2,
+					"host_latest_block_number": 6740362,
+					"broadcast_tx_hash": "0x1d2ca719554432792e8fa1e66a22b5369f285796b3c7c6b2dd147187bd218db6",
+					"broadcast_timestamp": 1619001693,
+					"any_sender_tx": null
+				}
+			}
+		},
+		{
+			"name": "TLOS on BSC native",
+			"description": "app_queryReport result for native report in the TLOS on BSC bridge",
+			"params": [{
+					"name": "Report Type",
+					"value": "native"
+				},
+				{
+					"name": "Nonce",
+					"value": 2
+				}
+			],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"native_tx_amount": "13.5072 TLOS",
+					"host_tx_amount": "13507290241206401113",
+					"native_account_nonce": 2,
+					"native_tx_recipient": "xbsc.ptokens",
+					"witnessed_timestamp": 1619099414,
+					"host_token_address": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+					"originating_tx_hash": "0x8e843546d9fc9731710bf1c89d5c2480aaf6f8ff740e8fb74acb1b21b6711d7d",
+					"originating_address": "0x0987494ee3a9ee1f3c9d64f680d8aead05eb28b5",
+					"native_latest_block_number": 148401732,
+					"native_token_address": "eosio.token",
+					"broadcast_tx_hash": "adfde42ed28bb1f59ddc508297083a9967758694028cc9b0146ee73e2cbee8de",
+					"broadcast_timestamp": 1619099474
+				}
+			}
+		},
+		{
+			"name": "pBTC on BSC host",
+			"description": "app_queryReport result for host report in the pBTC on BSC bridge",
+			"params": [{
+					"name": "Report Type",
+					"value": "host"
+				},
+				{
+					"name": "Nonce",
+					"value": 2
+				}
+			],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"broadcast_tx_hash": "0x5aad6e777d7ba065aaf5f16b4f03cc6b5afe58bd3a44c04953ae8a193a1eed2b",
+					"broadcast_timestamp": 1637617921,
+					"host_tx_hash": "0x5aad6e777d7ba065aaf5f16b4f03cc6b5afe58bd3a44c04953ae8a193a1eed2b",
+					"host_tx_amount": "9990000000000000",
+					"host_tx_recipient": "0x29020d71b03c712d4bf472b23a9e677bd3db24ee",
+					"host_account_nonce": 2,
+					"originating_tx_hash": "a0fdf326e25b4ce232eea86985766b8f32583913cdf378c22a586c61d9f5c558",
+					"originating_address": "3Aji5Tvyr5fVm7V6s737j59uPGmic5eLQA",
+					"witnessed_timestamp": 1637617917,
+					"native_latest_block_number": 710887,
+					"any_sender_tx": null,
+					"any_sender_nonce": null
+				}
+			}
+		},
+		{
+			"name": "pBTC on BSC native",
+			"description": "app_queryReport result for native report in the pBTC on BSC bridge",
+			"params": [{
+					"name": "Report Type",
+					"value": "native"
+				},
+				{
+					"name": "Nonce",
+					"value": 2
+				}
+			],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"broadcast_tx_hash": "f2bb715c73e35394ac86d1e1e5c6fdc2883de42528da0c3760005f599a9ad4f5",
+					"broadcast_timestamp": 1636792327,
+					"native_tx_hash": "f2bb715c73e35394ac86d1e1e5c6fdc2883de42528da0c3760005f599a9ad4f5",
+					"native_tx_amount": 12668250,
+					"native_tx_recipient": "3DRee5f91iSb7x7j1UBKRaANAfowGEMs2C",
+					"native_account_nonce": 2,
+					"originating_tx_hash": "0x8bf2fbfb395ab6f805d571f679056c59adf2551109e4b98cb67815028ea565b7",
+					"originating_address": "0x56846634ab5ac82061f29f9ad9f29ddd7be5f043",
+					"witnessed_timestamp": 1636792325,
+					"host_latest_block_number": 12609193
+				}
+			}
+		}
+	]
+}]

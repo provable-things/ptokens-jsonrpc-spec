@@ -1,0 +1,70 @@
+{
+	"NativeDepositAddress": {
+		"type": "object",
+		"properties": {
+			"enclavePublicKey": {
+				"type": "string"
+			},
+			"nonce": {
+				"type": "integer"
+			},
+			"nativeDepositAddress": {
+				"type": "string"
+			}
+		},
+		"required": [
+			"enclavePublicKey",
+			"nonce",
+			"nativeDepositAddress"
+		]
+	},
+	"DepositAddress": {
+		"type": "object",
+		"properties": {
+			"btc_deposit_address": {
+				"type": "string"
+			},
+			"eth_address": {
+				"type": "string"
+			},
+			"eth_address_and_nonce_hash": {
+				"type": "string"
+			},
+			"nonce": {
+				"type": "integer"
+			},
+			"public_key": {
+				"type": "string"
+			},
+			"tool_version": {
+				"type": "string"
+			},
+			"version": {
+				"type": "string"
+			}
+		},
+		"required": [
+			"btc_deposit_address",
+			"eth_address",
+			"eth_address_and_nonce_hash",
+			"nonce",
+			"public_key",
+			"tool_version",
+			"version"
+		]
+	},
+	"DepositAddresses": {
+		"type": "object",
+		"properties": {
+			"totalPages": {
+				"title": "total pages",
+				"type": "integer"
+			},
+			"reports": {
+				"title": "addresses",
+				"$ref": "#/components/schemas/DepositAddress"
+			}
+
+		}
+	}
+}

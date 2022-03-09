@@ -1,0 +1,104 @@
+{
+	"BridgeInfo": {
+		"title": "BridgeInfo",
+		"type": "object",
+		"required": [
+			"host_blockchain",
+			"host_identity",
+			"host_network",
+			"host_symbol",
+			"ipfs_multihash",
+			"last_processed_host_block",
+			"last_processed_native_block",
+			"min_transfer_amount",
+			"native_blockchain",
+			"native_network",
+			"native_symbol",
+			"proof_type",
+			"public_key",
+			"versions"
+		],
+		"properties": {
+			"host_symbol": {
+				"title": "host symbol",
+				"type": "string"
+			},
+			"host_network": {
+				"title": "host network",
+				"type": "string"
+			},
+			"native_symbol": {
+				"title": "native symbol",
+				"type": "string"
+			},
+			"native_network": {
+				"title": "native network",
+				"type": "string"
+			},
+			"host_blockchain": {
+				"title": "host blockchain name",
+				"type": "string"
+			},
+			"native_blockchain": {
+				"title": "native blockchain name",
+				"type": "string"
+			},
+			"last_processed_host_block": {
+				"title": "last processed block in host blockchain",
+				"type": "integer"
+			},
+			"last_processed_native_block": {
+				"title": "last processed block in native blockchain",
+				"type": "integer"
+			},
+			"smart_contract_address": {
+				"title": "smart contract address in host blockchain",
+				"type": "string"
+			},
+			"public_key": {
+				"title": "public key",
+				"type": ["string", "null"]
+			},
+			"native_smart_contract_address": {
+				"title": "smart contract address in native blockchain",
+				"type": "string"
+			},
+			"host_smart_contract_address": {
+				"title": "smart contract address in host blockchain",
+				"type": "string"
+			},
+			"native_identity": {
+				"title": "enclave address in native blockchain",
+				"type": "string"
+			},
+			"versions": {
+				"title": "version",
+				"type": "object",
+				"required": ["app"],
+				"properties": {
+					"app": {
+						"type": "string"
+					}
+				},
+				"additionalProperties": true
+			},
+			"proof_type": {
+				"title": "proof type",
+				"type": "string"
+			},
+			"ipfs_multihash": {
+				"title": "ipfs hash of the saved proof",
+				"type": "string"
+			},
+			"host_identity": {
+				"title": "enclave address in host blockchain",
+				"type": "string"
+			},
+			"min_transfer_amount": {
+				"title": "minimum transfer amount",
+				"type": "string"
+			}
+		},
+		"additionalProperties": true
+	}
+}

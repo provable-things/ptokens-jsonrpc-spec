@@ -1,0 +1,123 @@
+[{
+	"name": "app_queryIncomingTxHash",
+	"summary": "Returns query report by originating transaction hash.",
+	"params": [{
+		"name": "Originating Transaction Hash",
+		"required": true,
+		"schema": {
+			"title": "address",
+			"type": "string"
+		}
+	}],
+	"result": {
+		"name": "Transaction info",
+		"schema": {
+			"$ref": "#/components/schemas/Report"
+		}
+	},
+	"examples": [{
+			"name": "TLOS on BSC host originating transaction",
+			"description": "app_queryIncomingTxHash result for a BSC transaction",
+			"params": [{
+				"name": "Hash",
+				"value": "0x8e843546d9fc9731710bf1c89d5c2480aaf6f8ff740e8fb74acb1b21b6711d7d"
+			}],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"native_tx_amount": "13.5072 TLOS",
+					"host_tx_amount": "13507290241206401113",
+					"native_account_nonce": 2,
+					"native_tx_recipient": "xbsc.ptokens",
+					"witnessed_timestamp": 1619099414,
+					"host_token_address": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+					"originating_tx_hash": "0x8e843546d9fc9731710bf1c89d5c2480aaf6f8ff740e8fb74acb1b21b6711d7d",
+					"originating_address": "0x0987494ee3a9ee1f3c9d64f680d8aead05eb28b5",
+					"native_latest_block_number": 148401732,
+					"native_token_address": "eosio.token",
+					"broadcast_tx_hash": "adfde42ed28bb1f59ddc508297083a9967758694028cc9b0146ee73e2cbee8de",
+					"broadcast_timestamp": 1619099474
+				}
+			}
+		},
+		{
+			"name": "TLOS on BSC native originating transaction",
+			"description": "app_queryIncomingTxHash result for a TLOS transaction",
+			"params": [{
+				"name": "Hash",
+				"value": "c4e45892284d34b20ed2265bce6b5ec0e8536e294867862aeb099aa2b0146ece"
+			}],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"host_tx_hash": "0x6141c49a0412456537bf0060f036a9c5c0e419993c26787197f542e9fcbf355a",
+					"host_tx_amount": "100000000000000000",
+					"host_tx_recipient": "0x8127192c2e4703dfb47f087883cc3120fe061cb8",
+					"witnessed_timestamp": 1618922498,
+					"host_token_address": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+					"originating_tx_hash": "c4e45892284d34b20ed2265bce6b5ec0e8536e294867862aeb099aa2b0146ece",
+					"originating_address": "whateverxxxy",
+					"native_token_address": "eosio.token",
+					"any_sender_nonce": null,
+					"host_account_nonce": 1,
+					"host_latest_block_number": 6730003,
+					"broadcast_tx_hash": "0x6141c49a0412456537bf0060f036a9c5c0e419993c26787197f542e9fcbf355a",
+					"broadcast_timestamp": 1618922500,
+					"any_sender_tx": null
+				}
+			}
+		},
+		{
+			"name": "pBTC on BSC host originating transaction",
+			"description": "app_queryIncomingTxHash result for a BSC transaction",
+			"params": [{
+				"name": "Hash",
+				"value": "0x8bf2fbfb395ab6f805d571f679056c59adf2551109e4b98cb67815028ea565b7"
+			}],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"broadcast_tx_hash": "f2bb715c73e35394ac86d1e1e5c6fdc2883de42528da0c3760005f599a9ad4f5",
+					"broadcast_timestamp": 1636792327,
+					"native_tx_hash": "f2bb715c73e35394ac86d1e1e5c6fdc2883de42528da0c3760005f599a9ad4f5",
+					"native_tx_amount": 12668250,
+					"native_tx_recipient": "3DRee5f91iSb7x7j1UBKRaANAfowGEMs2C",
+					"native_account_nonce": 2,
+					"originating_tx_hash": "0x8bf2fbfb395ab6f805d571f679056c59adf2551109e4b98cb67815028ea565b7",
+					"originating_address": "0x56846634ab5ac82061f29f9ad9f29ddd7be5f043",
+					"witnessed_timestamp": 1636792325,
+					"host_latest_block_number": 12609193
+				}
+			}
+		},
+		{
+			"name": "pBTC on BSC native originating transaction",
+			"description": "app_queryIncomingTxHash result for a BTC transaction",
+			"params": [{
+				"name": "Hash",
+				"value": "a0fdf326e25b4ce232eea86985766b8f32583913cdf378c22a586c61d9f5c558"
+			}],
+			"result": {
+				"name": "_",
+				"value": {
+					"broadcast": true,
+					"broadcast_tx_hash": "0x5aad6e777d7ba065aaf5f16b4f03cc6b5afe58bd3a44c04953ae8a193a1eed2b",
+					"broadcast_timestamp": 1637617921,
+					"host_tx_hash": "0x5aad6e777d7ba065aaf5f16b4f03cc6b5afe58bd3a44c04953ae8a193a1eed2b",
+					"host_tx_amount": "9990000000000000",
+					"host_tx_recipient": "0x29020d71b03c712d4bf472b23a9e677bd3db24ee",
+					"host_account_nonce": 2,
+					"originating_tx_hash": "a0fdf326e25b4ce232eea86985766b8f32583913cdf378c22a586c61d9f5c558",
+					"originating_address": "3Aji5Tvyr5fVm7V6s737j59uPGmic5eLQA",
+					"witnessed_timestamp": 1637617917,
+					"native_latest_block_number": 710887,
+					"any_sender_tx": null,
+					"any_sender_nonce": null
+				}
+			}
+		}
+	]
+}]
