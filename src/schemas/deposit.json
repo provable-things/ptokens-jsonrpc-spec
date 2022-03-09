@@ -3,13 +3,16 @@
 		"type": "object",
 		"properties": {
 			"enclavePublicKey": {
-				"type": "string"
+				"type": "string",
+				"description": "TODO"
 			},
 			"nonce": {
-				"type": "integer"
+				"type": "integer",
+				"description": "TODO"
 			},
 			"nativeDepositAddress": {
-				"type": "string"
+				"type": "string",
+				"description": "The generated native deposit address associated with the input host address"
 			}
 		},
 		"required": [
@@ -22,25 +25,32 @@
 		"type": "object",
 		"properties": {
 			"btc_deposit_address": {
-				"type": "string"
+				"type": "string",
+				"description": "The native deposit address associated to the host address"
 			},
 			"eth_address": {
-				"type": "string"
+				"type": "string",
+				"description": "The host address connected to the native deposit address"
 			},
 			"eth_address_and_nonce_hash": {
-				"type": "string"
+				"type": "string",
+				"description": "TODO"
 			},
 			"nonce": {
-				"type": "integer"
+				"type": "integer",
+				"description": "TODO"
 			},
 			"public_key": {
-				"type": "string"
+				"type": "string",
+				"description": "TODO"
 			},
 			"tool_version": {
-				"type": "string"
+				"type": "string",
+				"description": "TODO"
 			},
 			"version": {
-				"type": "string"
+				"type": "string",
+				"description": "TODO"
 			}
 		},
 		"required": [
@@ -58,13 +68,16 @@
 		"properties": {
 			"totalPages": {
 				"title": "total pages",
-				"type": "integer"
+				"type": "integer",
+				"description": "The total number of pages"
 			},
-			"reports": {
-				"title": "addresses",
-				"$ref": "#/components/schemas/DepositAddress"
+			"depositAddresses": {
+				"title": "deposit address objects array",
+				"type": "array",
+				"items": {
+					"$ref": "#/components/schemas/DepositAddress"
+				}
 			}
-
 		}
 	}
 }

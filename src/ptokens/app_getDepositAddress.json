@@ -1,16 +1,20 @@
 [{
 		"name": "app_getNativeDepositAddress",
-		"summary": "Create a deposit address related to the host blockchain address passed as a parameter.",
+		"summary": "Creates a deposit address related to the host blockchain address passed as a parameter.",
+		"description": "Creates a native deposit address related to the host blockchain address passed as a parameter. This method works only for UTXO bridges where pNetwork requires a deposit address for swapping between native and host blockchains.",
 		"params": [{
-			"name": "Address",
+			"name": "Host Address",
+			"summary": "Host Address",
 			"required": true,
 			"schema": {
-				"title": "address",
-				"type": "string"
+				"title": "host address",
+				"type": "string",
+				"description": "A host UTXO bridge address that will be associated with the generated native deposit address"
 			}
 		}],
 		"result": {
-			"name": "Deposit Address",
+			"name": "Native Deposit Address Object",
+			"description": "An object containing information about the newly created native deposit address",
 			"schema": {
 				"$ref": "#/components/schemas/NativeDepositAddress"
 			}
@@ -37,14 +41,16 @@
 		"summary": "Returns paginated deposit addresses.",
 		"params": [{
 			"name": "Page Number",
+			"summary": "Page Number",
 			"required": true,
 			"schema": {
 				"title": "page number",
-				"type": "integer"
+				"type": "integer",
+				"description": "The page number to be returned"
 			}
 		}],
 		"result": {
-			"name": "Deposit Address Array",
+			"name": "Deposit Address Objects Page",
 			"schema": {
 				"$ref": "#/components/schemas/DepositAddresses"
 			}
