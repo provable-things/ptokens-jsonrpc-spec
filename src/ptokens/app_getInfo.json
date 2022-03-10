@@ -1,0 +1,69 @@
+[{
+	"name": "app_getInfo",
+	"summary": "Returns information about the bridge.",
+	"params": [],
+	"result": {
+		"name": "Bridge information",
+		"schema": {
+			"$ref": "#/components/schemas/BridgeInfo"
+		}
+	},
+	"examples": [{
+			"name": "pBTC on BSC",
+			"description": "app_getInfo result for the pBTC on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": {
+					"host_symbol": "pbtc",
+					"host_network": "mainnet",
+					"native_symbol": "btc",
+					"native_network": "mainnet",
+					"host_blockchain": "binance-smart-chain",
+					"native_blockchain": "bitcoin",
+					"last_processed_host_block": 15878262,
+					"last_processed_native_block": 726394,
+					"smart_contract_address": "0x1003d3574ac79303a5fa0951ecb04cc7acba9747",
+					"public_key": "0276aef1bc798803845d65cbd4c5dd27173a6fe99330c41b38e3b297cc4ad98bfc",
+					"versions": {
+					  "app": "not defined"
+					},
+					"proof_type": "not defined",
+					"ipfs_multihash": "not defined",
+					"host_identity": "0x50e8254b01372015143feece11e0b8b4c4f999d4",
+					"min_transfer_amount": "0.00005"
+				  }				  
+			}
+		},
+		{
+			"name": "TLOS on BSC",
+			"description": "app_getInfo result for the TLOS on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": {
+					"host_symbol": "TLOS",
+					"host_network": "mainnet",
+					"native_symbol": "TLOS",
+					"native_network": "mainnet",
+					"host_blockchain": "binance-smart-chain",
+					"native_blockchain": "telos",
+					"last_processed_host_block": 15878271,
+					"last_processed_native_block": 203617715,
+					"native_smart_contract_address": "eosio.token",
+					"host_smart_contract_address": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+					"native_vault_address": "xbsc.ptokens",
+					"public_key": null,
+					"versions": {
+					  "app": "not defined"
+					},
+					"proof_type": "not defined",
+					"ipfs_multihash": "not defined",
+					"host_identity": "0xd13e4182d09ee4ca5c87c6cef1565357a47937d2",
+					"native_identity": "xbsc.ptokens",
+					"min_transfer_amount": "0.00010"
+				  }				  
+			}
+		}
+	]
+}]

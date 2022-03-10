@@ -1,0 +1,239 @@
+{
+	"HostReport": {
+		"type": "object",
+		"properties": {
+			"broadcast": {
+				"title": "broadcasted",
+				"type": "boolean",
+				"description": "Indicates if the broadcast transaction has been correctly broadcasted"
+			},
+			"host_tx_hash": {
+				"title": "host blockchain transaction hash",
+				"type": "string",
+				"description": "The hash of the transaction in the host blockchain"
+			},
+			"host_tx_amount": {
+				"title": "host blockchain transaction amount",
+				"type": ["integer", "string"],
+				"description": "The amount of transferred token in the host transaction"
+			},
+			"host_tx_recipient": {
+				"title": "host blockchain transaction recipient",
+				"type": "string",
+				"description": "The recipient of the transaction in the host blockchain"
+			},
+			"witnessed_timestamp": {
+				"title": "witnessed timestamp",
+				"type": "integer",
+				"description": "TODO"
+			},
+			"host_token_address": {
+				"title": "host blockchain token address",
+				"type": "string",
+				"description": "The smart contract address of the token in the host blockchain"
+			},
+			"originating_tx_hash": {
+				"title": "originating transaction hash",
+				"type": "string",
+				"description": "The hash of the originating transaction in the native blockchain"
+			},
+			"originating_address": {
+				"title": "originating address",
+				"type": "string",
+				"description": "The address of the originating transaction sender in the native blockchain"
+			},
+			"native_token_address": {
+				"title": "native token address",
+				"type": "string",
+				"description": "The smart contract address of the token in the native blockchain"
+			},
+			"any_sender_nonce": {
+				"type": ["integer", "null"],
+				"description": "TODO"
+			},
+			"host_account_nonce": {
+				"title": "host blockchain account nonce",
+				"type": "integer",
+				"description": "TODO"
+			},
+			"native_latest_block_number": {
+				"title": "native blockchain latest block number",
+				"type": "integer",
+				"description": "The latest block number in the native blockchain"
+			},
+			"broadcast_tx_hash": {
+				"title": "broadcast transaction hash",
+				"type": "string",
+				"description": "The hash of the broadcast transaction in the host blockchain"
+			},
+			"broadcast_timestamp": {
+				"title": "broadcast timestamp",
+				"type": "integer",
+				"description": "The timestamp of the broadcast transaction"
+			},
+			"any_sender_tx": {
+				"type": ["string", "null"],
+				"description": "TODO"
+			}
+		},
+		"required": [
+			"any_sender_nonce",
+			"broadcast",
+			"broadcast_timestamp",
+			"broadcast_tx_hash",
+			"host_account_nonce",
+			"host_tx_amount",
+			"host_tx_hash",
+			"host_tx_recipient",
+			"originating_address",
+			"originating_tx_hash",
+			"witnessed_timestamp"
+		]
+	},
+	"NativeReport": {
+		"properties": {
+			"broadcast": {
+				"title": "broadcasted",
+				"type": "boolean",
+				"description": "Indicates if the broadcast transaction has been correctly broadcasted"
+			},
+			"native_tx_hash": {
+				"title": "native blockchain transaction hash",
+				"type": "string",
+				"description": "The hash of the transaction in the native blockchain"
+			},
+			"native_tx_amount": {
+				"title": "native blockchain transaction amount",
+				"type": ["integer", "string"],
+				"description": "The amount of transferred token in the native transaction"
+			},
+			"native_tx_recipient": {
+				"title": "native blockchain transaction recipient",
+				"type": "string",
+				"description": "The recipient of the transaction in the native blockchain"
+			},
+			"witnessed_timestamp": {
+				"title": "witnessed timestamp",
+				"type": "integer",
+				"description": "TODO"
+			},
+			"host_token_address": {
+				"title": "host blockchain token address",
+				"type": "string",
+				"description": "The smart contract address of the token in the host blockchain"
+			},
+			"originating_tx_hash": {
+				"title": "originating transaction hash",
+				"type": "string",
+				"description": "The hash of the originating transaction in the host blockchain"
+			},
+			"originating_address": {
+				"title": "originating address",
+				"type": "string",
+				"description": "The address of the originating transaction sender in the host blockchain"
+			},
+			"native_token_address": {
+				"title": "native token address",
+				"type": "string",
+				"description": "The smart contract address of the token in the native blockchain"
+			},
+			"any_sender_nonce": {
+				"type": ["integer", "null"],
+				"description": "TODO"
+			},
+			"native_account_nonce": {
+				"title": "native blockchain account nonce",
+				"type": "integer",
+				"description": "TODO"
+			},
+			"host_latest_block_number": {
+				"title": "host blockchain latest block number",
+				"type": "integer",
+				"description": "The latest block number in the host blockchain"
+			},
+			"broadcast_tx_hash": {
+				"title": "broadcast transaction hash",
+				"type": "string",
+				"description": "The hash of the broadcast transaction in the native blockchain"
+			},
+			"broadcast_timestamp": {
+				"title": "broadcast timestamp",
+				"type": "integer",
+				"description": "The timestamp of the broadcast transaction"
+			},
+			"any_sender_tx": {
+				"type": ["string", "null"],
+				"description": "TODO"
+			}
+		},
+		"required": [
+			"broadcast",
+			"broadcast_timestamp",
+			"broadcast_tx_hash",
+			"native_account_nonce",
+			"native_tx_amount",
+			"native_tx_recipient",
+			"originating_address",
+			"originating_tx_hash",
+			"witnessed_timestamp"
+		]
+	},
+	"HostReportArray": {
+		"type": "array",
+		"title": "host reports array",
+		"description": "Array of host reports",
+		"items": {
+			"$ref": "#/components/schemas/HostReport"
+		}
+	},
+	"NativeReportArray": {
+		"type": "array",
+		"title": "native reports array",
+		"description": "Array of native reports",
+		"items": {
+			"$ref": "#/components/schemas/NativeReport"
+		}
+	},
+	"Report": {
+		"oneOf": [{
+			"$ref": "#/components/schemas/HostReport"
+		}, {
+			"$ref": "#/components/schemas/NativeReport"
+		}]
+	},
+	"ReportArray": {
+		"oneOf": [{
+			"$ref": "#/components/schemas/HostReportArray"
+		}, {
+			"$ref": "#/components/schemas/NativeReportArray"
+		}]
+	},
+	"HostReports": {
+		"type": "object",
+		"properties": {
+			"totalPages": {
+				"title": "total pages",
+				"description": "The total number of pages",
+				"type": "integer"
+			},
+			"reports": {
+				"$ref": "#/components/schemas/HostReportArray"
+			}
+
+		}
+	},
+	"NativeReports": {
+		"type": "object",
+		"properties": {
+			"totalPages": {
+				"title": "total pages",
+				"description": "The total number of pages",
+				"type": "integer"
+			},
+			"reports": {
+				"$ref": "#/components/schemas/NativeReportArray"
+			}
+
+		}
+	}
+}

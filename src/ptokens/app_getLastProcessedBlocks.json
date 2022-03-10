@@ -1,0 +1,59 @@
+[{
+		"name": "app_getLastProcessedHostBlock",
+		"summary": "Returns last processed host blockchain block number.",
+		"params": [],
+		"result": {
+			"name": "Last processed host block number",
+			"schema": {
+				"title": "block number",
+				"type": "integer"
+			}
+		},
+		"examples": [{
+			"name": "TLOS on BSC",
+			"description": "Last processed host block number for the pBTC on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": 15880006
+			}
+		}, {
+			"name": "pBTC on BSC",
+			"description": "Last processed host block number for the pBTC on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": 15880024
+			}
+		}]
+	},
+	{
+		"name": "app_getLastProcessedNativeBlock",
+		"summary": "Returns last processed native blockchain block number.",
+		"params": [],
+		"result": {
+			"name": "Last processed native block number",
+			"schema": {
+				"title": "block number",
+				"type": "integer"
+			}
+		},
+		"examples": [{
+			"name": "TLOS on BSC",
+			"description": "Last processed native block number for the pBTC on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": 203629715
+			}
+		}, {
+			"name": "pBTC on BSC",
+			"description": "Last processed native block number for the pBTC on BSC bridge",
+			"params": [],
+			"result": {
+				"name": "_",
+				"value": 726408
+			}
+		}]
+	}
+]
