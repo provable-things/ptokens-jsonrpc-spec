@@ -5,7 +5,8 @@
 		"name": "Broadcast Transaction Hash",
 		"required": true,
 		"schema": {
-			"title": "address",
+			"title": "broadcast transaction hash",
+			"description": "The hash of the broadcast transaction",
 			"type": "string"
 		}
 	}],

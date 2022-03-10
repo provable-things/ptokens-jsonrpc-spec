@@ -6,7 +6,8 @@
 			"required": true,
 			"schema": {
 				"title": "report type",
-				"type": "string"
+				"type": "string",
+				"description": "The report type: might be native or host"
 			}
 		},
 		{
@@ -14,7 +15,8 @@
 			"required": true,
 			"schema": {
 				"title": "nonce",
-				"type": "integer"
+				"type": "integer",
+				"description": "The enclave nonce in the blockchain specified by Report Type"
 			}
 		}
 	],

@@ -5,7 +5,8 @@
 			"name": "Native Address",
 			"required": true,
 			"schema": {
-				"title": "address",
+				"title": "native address",
+				"description": "The address of the originating transaction sender in the native blockchain",
 				"type": "string"
 			}
 		},

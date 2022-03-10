@@ -5,7 +5,8 @@
 			"name": "Host Address",
 			"required": true,
 			"schema": {
-				"title": "address",
+				"title": "host address",
+				"description": "The address of the originating transaction sender in the host blockchain",
 				"type": "string"
 			}
 		},

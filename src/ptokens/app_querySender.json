@@ -6,7 +6,8 @@
 			"required": true,
 			"schema": {
 				"title": "address",
-				"type": "string"
+				"type": "string",
+				"description": "The address of the originating transaction sender"
 			}
 		},
 		{
@@ -14,7 +15,8 @@
 			"required": true,
 			"schema": {
 				"title": "limit",
-				"type": "integer"
+				"type": "integer",
+				"description": "The number of reports to be returned"
 			}
 		}
 	],

@@ -2,11 +2,12 @@
 	"name": "app_queryNativeReports",
 	"summary": "Returns paginated native reports.",
 	"params": [{
-		"name": "Page",
+		"name": "Page Number",
 		"required": true,
 		"schema": {
-			"title": "page",
-			"type": "integer"
+			"title": "page number",
+			"type": "integer",
+			"description": "The page number to be returned"
 		}
 	}],
 	"result": {
