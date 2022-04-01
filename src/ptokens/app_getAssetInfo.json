@@ -1,0 +1,20 @@
+[{
+	"name": "app_getAssetInfo",
+	"summary": "Returns pToken asset information",
+	"params": [{
+		"name": "ptoken",
+		"required": true,
+		"schema": {
+			"title": "ptoken identifier",
+			"type": "string",
+			"description": "Native or pToken identifier, e.g. BTC or pBTC are the same"
+		}
+	}],
+	"result": {
+		"name": "Asset info",
+		"schema": {
+			"$ref": "#/components/schemas/SupportedChainsArrays"
+		}
+	},
+	"examples": []
+}]

@@ -1,5 +1,5 @@
 [{
-	"name": "app_new",
+	"name": "app_getTransactionStatus",
 	"summary": "Returns output transactions from an originating transaction hash.",
 	"params": [{
 		"name": "Originating Transaction Hash",

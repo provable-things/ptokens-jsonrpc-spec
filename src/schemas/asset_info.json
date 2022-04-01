@@ -1,0 +1,47 @@
+{
+	"SupportedChain": {
+		"type": "object",
+		"properties": {
+			"address": {
+				"title": "address",
+				"type": "string",
+				"description": "token address"
+			},
+			"decimals": {
+				"title": "decimals",
+				"type": "integer",
+				"description": "token decimals"
+			},
+            "chain_id": {
+				"title": "chain_id",
+				"type": "string",
+				"description": "the chain ID"
+			},
+			"is_native": {
+				"title": "is_native",
+				"type": "boolean",
+				"description": "Indicates if the token native on this chain"
+			}
+		},
+		"required": [
+			"address",
+			"decimals",
+			"chain_id",
+			"is_native"
+		]
+	},
+    "SupportedChainsArrays": {
+		"type": "object",
+		"properties": {
+			"supported_chains": {
+				"title": "supported chains",
+				"description": "supported chains",
+				"type": "array",
+				"items": {"$ref": "#/components/schemas/SupportedChain"}
+			}
+		},
+		"required": [
+			"supported_chains"
+		]
+	}
+}

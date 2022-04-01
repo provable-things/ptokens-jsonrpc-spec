@@ -1,5 +1,5 @@
 {
-	"TxReport": {
+	"TxStats": {
 		"type": "object",
 		"properties": {
 			"tx_hash": {
@@ -30,7 +30,7 @@
 		"title": "transactions array",
 		"description": "Array of transactions",
 		"items": {
-			"$ref": "#/components/schemas/TxReport"
+			"$ref": "#/components/schemas/TxStats"
 		}
 	},
     "TxResult": {
