@@ -1,6 +1,6 @@
 {
   "name": "ptokens-rpc-api",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Collection of JSON-RPC APIs provided by ptokens 2.0 clients",
   "main": "index.js",
   "type": "module",

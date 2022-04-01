@@ -1,0 +1,29 @@
+[{
+	"name": "app_new",
+	"summary": "Returns output transactions from an originating transaction hash.",
+	"params": [{
+		"name": "Originating Transaction Hash",
+		"required": true,
+		"schema": {
+			"title": "originating transaction hash",
+			"description": "The hast of the originating transaction",
+			"type": "string"
+		}
+	},
+	{
+		"name": "Originating Chain ID",
+		"required": true,
+		"schema": {
+			"title": "originating Chain ID",
+			"description": "The Chain ID of the originating transaction blockchain",
+			"type": "string"
+		}
+	}],
+	"result": {
+		"name": "Transaction info",
+		"schema": {
+			"$ref": "#/components/schemas/TxResult"
+		}
+	},
+	"examples": []
+}]

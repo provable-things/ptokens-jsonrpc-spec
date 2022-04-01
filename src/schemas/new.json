@@ -1,0 +1,55 @@
+{
+	"TxReport": {
+		"type": "object",
+		"properties": {
+			"tx_hash": {
+				"title": "tx_hash",
+				"type": "string",
+				"description": "transaction hash"
+			},
+			"chain_id": {
+				"title": "chain_id",
+				"type": "string",
+				"description": "chain_id"
+			},
+            "status": {
+				"title": "status",
+				"type": "string",
+				"description": "status",
+                "enum": ["broadcasted", "received", "undetected", "unknown"]
+			}
+		},
+		"required": [
+			"tx_hash",
+			"chain_id",
+			"status"
+		]
+	},
+	"TxsArray": {
+		"type": "array",
+		"title": "transactions array",
+		"description": "Array of transactions",
+		"items": {
+			"$ref": "#/components/schemas/TxReport"
+		}
+	},
+    "TxResult": {
+		"type": "object",
+		"properties": {
+			"inputs": {
+				"title": "input transactions array",
+				"description": "input transactions",
+                "$ref": "#/components/schemas/TxsArray"
+			},
+            "outputs": {
+				"title": "input transactions array",
+				"description": "input transactions",
+                "$ref": "#/components/schemas/TxsArray"
+			}
+		},
+		"required": [
+			"inputs",
+			"outputs"
+		]
+	}
+}
