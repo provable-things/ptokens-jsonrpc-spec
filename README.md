@@ -46,6 +46,6 @@ data.json valid
 This repository is licensed under [MIT](LICENSE).
 
 
-[playground]: https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/provable-things/ptokens-jsonrpc-spec/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false&uiSchema[appBar][ui:title]=pTokens&uiSchema[appBar][ui:logoUrl]=https://avatars.githubusercontent.com/u/16259422?s=200&v=4
+[playground]: https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/pnetwork-association/ptokens-jsonrpc-spec/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false&uiSchema[appBar][ui:title]=pTokens&uiSchema[appBar][ui:logoUrl]=https://avatars.githubusercontent.com/u/120671018?s=200&v=4
 [openrpc]: https://open-rpc.org
 [validator]: https://open-rpc.github.io/schema-utils-js/globals.html#validateopenrpcdocument
